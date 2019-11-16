@@ -1,0 +1,17 @@
+    {% extends "base.html" %}
+    {% load staticfiles %}
+
+    {% block content %}
+    <div class="container-fluid" id="content">
+        <video autoplay loop muted>
+            <source src="{% static 'video/GoPro2017.mp4'  %}" type="video/mp4">
+        </video>
+
+        <div class="container-fluid main_text" id="text1">
+            <h1 id="title">DJANGO FRAMEWORK</h1>
+        </div>
+        <div class="container-fluid main_text" id="text2">
+            <h1 id="made">Made By <span id="username">Ryan</span> &amp; <span id="dlab">DLAB</span></h1>
+        </div>
+    </div>
+    {% endblock content %}

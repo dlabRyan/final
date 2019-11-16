@@ -1,0 +1,16 @@
+    {% extends "base.html" %}
+    {% load staticfiles %}
+    {% block content %}
+    <div class="container">
+
+        {% for item in object_list %}
+        <div>
+            <p>{{ item.title }}</p>
+            <p>{{ item.image.url }}</p>
+            <p>{{ item.description }}</p>
+            <a href="{% url 'blog_update'  item.id %}">Update</a>
+            <a href="{% url 'blog_delete'  item.id %}">Delete</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock content %}
